@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Button-Klick</title>
+		<meta charset = "UTF-8">
+		<script type="text/javascript">
+		
+		var iN = 0;
+		function fButtonClick()
+		{
+			with(document.Form1.btnClick)
+			{
+				iN++;
+				value="Sie haben schon " + iN + " mal geklickt!";
+			}
+		}
+		</script>
+		<noscript>Bitte schalten Sie JavaScript ein</noscript>
+	</head>
+	<body>
+		<h3>Button-Klick</h3>
+		<form name = "Form1">
+			<input type="button" name="btnClick" value="Hier klicken" onclick="fButtonClick()"><br>
+		</form>
+	</body>
+</html>	

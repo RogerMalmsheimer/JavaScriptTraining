@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Textarea = mehrzeiliges Textfeld</title>
+		<meta charset = "UTF-8">
+		<script type="text/javascript">
+		
+		function fTextFuell()
+		{
+			document.Form1.txtAusgabe.value = document.Form1.txtAusgabe.value + "\n\nDies\nist\nein\nmehrzeiliges\nTextfeld";
+		}
+		</script>
+		<noscript>Bitte schalten Sie JavaScript ein</noscript>
+	</head>
+	<body>
+		<h3>Submit Formular</h3>
+		<br>
+		<form name = "Form1" action = "JavaScript_Submit.html">
+			<input type="button" name="btnStart" value="Bitte hier klicken" onclick="fTextFuell()"></input><br>
+			<textarea name="txtAusgabe" rows="15" cols="40">Mehrzeiliges Textfeld !</textarea>
+		</form>
+	</body>
+</html>	

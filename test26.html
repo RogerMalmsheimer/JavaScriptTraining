@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Radio-Buttons</title>
+		<meta charset = "UTF-8">
+		<script type="text/javascript">
+		
+		function fRadioTest()
+		{
+			var il = 0;
+			var iAnz = 0;
+			
+			for(var i = 0; i <= document.Form1.radioButton.length - 1; i++)
+			{
+				il = i + 1;
+				if (document.Form1.radioButton[i].checked == true)
+				{
+					alert("Radio-Button Nr." + il + " ist angekreuzt!");
+					alert("Es wurde " + document.Form1.radioButton[i].value + " angekreuzt");
+					iAnz++;
+				}
+			}
+		}
+		</script>
+		<noscript>Bitte schalten Sie JavaScript ein</noscript>
+	</head>
+	<body>
+		<h3>Checkbox-Test</h3>
+		<br>
+		<form name = "Form1" action = "JavaScript_RadioButton.html" method = "post">
+			Radio-Button 1<input type = "Radio" name = "radioButton" value = "Button Eins" checked><br>
+			Radio-Button 2<input type = "Radio" name = "radioButton" value = "Button Zwei"><br>
+			Radio-Button 3<input type = "Radio" name = "radioButton" value = "Button drei"><br>
+			Radio-Button 4<input type = "Radio" name = "radioButton" value = "Button Vier"><br>
+			Radio-Button 5<input type = "Radio" name = "radioButton" value = "Button Fuenf"><br>
+			<br>
+			<input type="button" name="btn1" value="Radio-Buttons testen" onclick="fRadioTest()">
+		</form>
+	</body>
+</html>	

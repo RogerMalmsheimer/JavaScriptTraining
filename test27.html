@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>Submit Formular</title>
+		<meta charset = "UTF-8">
+		<script type="text/javascript">
+		
+		function fPruefeEingabe(formular)
+		{
+			var bOK = true;
+			with (formular)
+			{
+				if(txtPLZ.value.length < 5)
+				{
+					alert("Bitte PLZ korrekt eingeben!");
+					bOK = false;
+				}
+				if(txtNachname.value.length < 2)
+				{
+					alert("Bitte Nachnamen korrekt eingeben!");
+					bOK = false;
+				}
+				if(txtOrt.value.length < 2)
+				{
+					alert("Bitte Ort korrekt eingeben!");
+					bOK = false;
+				}
+			}
+			return (bOK)
+		}
+		</script>
+		<noscript>Bitte schalten Sie JavaScript ein</noscript>
+	</head>
+	<body>
+		<h3>Submit Formular</h3>
+		<br>
+		<form name = "Form1" action = "JavaScript_Submit.html" method = "post" onSubmit="return fPruefeEingabe(this)">
+			<table>
+				<tr>
+					<td>Vorname</td>
+					<td><input type="text" name="txtVorname" size="40" maxlength="40"></td>
+				</tr>
+				<tr>
+					<td>Nachname</td>
+					<td><input type="text" name="txtNachname" size="40" maxlength="40"></td>
+				</tr>
+				<tr>
+					<td>Straße</td>
+					<td><input type="text" name="txtStrasse" size="40" maxlength="40"></td>
+				</tr>
+				<tr>
+					<td>PLZ</td>
+					<td><input type="text" name="txtPLZ" size="40" maxlength="40"></td>
+				</tr>
+				<tr>
+					<td>Ort</td>
+					<td><input type="text" name="txtOrt" size="40" maxlength="40"></td>
+				</tr>
+			</table>
+			<br>
+			<input type="submit" name="btnSubmit">
+			<input type="reset" name="btnReset">
+		</form>
+	</body>
+</html>	

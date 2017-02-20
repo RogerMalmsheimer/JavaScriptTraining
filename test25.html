@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>Checkboxen</title>
+		<meta charset = "UTF-8">
+		<script type="text/javascript">
+		
+		function fChkTest()
+		{
+			var il = 0;
+			var iAnz = 0;
+			
+			for(var i = 0; i <= document.Form1.chkBox.length - 1; i++)
+			{
+				il = i + 1;
+				if (document.Form1.chkBox[i].checked == true)
+				{
+					alert("Check-Box Nr." + il + " ist angekreuzt!");
+					alert("Es wurde " + document.Form1.chkBox[i].value + " angekreuzt");
+					iAnz++;
+				}
+			}
+			if (iAnz == 0)
+			{
+				alert ("Es wurde keine Box angekreuzt!");
+			}
+			else
+			{
+				alert ("Es wurden insgesamt " + iAnz + " Box(en) angekreuzt!");
+			}
+		}
+		</script>
+		<noscript>Bitte schalten Sie JavaScript ein</noscript>
+	</head>
+	<body>
+		<h3>Checkbox-Test</h3>
+		<br>
+		<form name = "Form1" action = "JavaScript_CheckBox.html" method = "post">
+			Box 1<input type = "Checkbox" name = "chkBox" value = "Checkbox Eins"><br>
+			Box 2<input type = "Checkbox" name = "chkBox" value = "Checkbox Zwei"><br>
+			Box 3<input type = "Checkbox" name = "chkBox" value = "Checkbox Drei"><br>
+			<br>
+			<input type="button" name="btn1" value="Checkboxen testen" onclick="fChkTest()">
+		</form>
+	</body>
+</html>	
