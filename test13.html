@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>Tabelle</title>
+
+		<script type="text/javascript">
+			function fQuadrat(dZ)
+			{
+				var dQ = dZ * dZ;
+				return dQ;
+			}
+			
+			function fTabelle()
+			{
+				var iZeilen = parseInt(document.frmTabelle.txtZeilen.value);
+				if (iZeilen >= 1)
+				{
+					with(document)
+					{
+						open();
+						write("<HTML>");
+						write("   <HEAD>");
+						write("		<TITLE>Tabelle der Quadratzahlen mit Java-Script<\/TITLE>");
+						write("   </HEAD>");
+						write("   <BODY>");
+						write("   <H3>Tabelle der Quadratzahlen von 1 bis " + iZeilen + "</H3>");
+						write("		<TABLE BORDER = 1>");
+						write("			<TR>");
+						write("				<TD>Zahl<\/TD><TD>Quadrat<\/TD>");
+						write("			</TR>");
+						
+						for (var i = 1; i <= iZeilen; i++)
+						{
+							write("		<TR>");
+							write("			<TD>" + i + "<\/TD><TD>" + fQuadrat(i) + "<\/TD>");
+							write("		<\/TR>");
+						}	
+						write("		<\/TABLE>");
+						write("	<\/BODY>");
+						write("<\/HTML>");
+						close();
+						}
+					}
+				}
+				else
+				{
+					alert("Grösser als 1 habe ich gesagt!!!");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form method = "get" name = "frmTabelle">
+			<h3>Tabelle der Quadratzahlen erzeugen</h3>
+			Gib eine ganze Zahl groesser als 1 ein: 
+			input type = "text" name = "txtZeilen">
+			input type = "button" name = "btnStart" value = "Start" onclick = "javascript:fTabelle()">
+		</form>
+	</body>	
+</html>	

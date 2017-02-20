@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>JavaScript - Beispiel fuer eine 'DO WHILE'-Schleife</title>
+		<script type="text/javascript">
+		
+		function fGGT(iX, iY)
+		{
+			var a = Math.max(iX, iY);
+			var b = Math.min(iX, iY);
+			
+			var rest = 0;
+			do
+			{
+				rest = a % b;
+				a = b;
+				b = rest;
+			} while (rest > 0)
+			return a;
+		}
+		
+		function fBerechne()
+		{
+			with (document.frmGGT)
+			{
+				iX = parseInt(txtZahl1.value);
+				txtZahl1.value = iX;
+				
+				iY = parseInt(txtZahl2.value);
+				txtZahl2 = iY;
+				
+				txtGGT.value = fGGT(iX, iY);
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<h1>Ermittlung des groessten gemeinsamen Teilers (ggT) zweier Zahlen</h1>
+		<form method= "get" name = "frmGGT">
+			<h2> EIngabe</h2>
+			<p>
+				a = <input type = "text" name = "txtZahl1"><br>
+				b = <input type = "text" name = "txtZahl2">
+				<input type = "button" name = "btnStart" value = "ggT ermitteln" onclick = "fBerechne()">
+			</p>
+			<h2> Ergebnis</h2>
+			<p>
+				ggT = <input type = "text" name = "txtGGT">
+			</p>
+		<form>		
+	</body>
+</html>	

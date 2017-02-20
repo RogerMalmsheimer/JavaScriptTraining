@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Summe von 2 Zahlen - falsche Version</title>
+		<script type="text/javascript">
+			function fSumme()
+			{
+				var dZahl1 = parseFloat(document.Form1.txtZahl1.value);
+				var dZahl2 = parseFloat(document.Form1.txtZahl2.value);
+				var dSumme = dZahl1 + dZahl2;
+				document.Form1.txtSumme.value = dSumme;
+			}
+		</script>
+	</head>	
+	<body>
+		<h3>Summe von 2 Zahlen - richtige Version</h3>
+		<form method="get" name="Form1">
+			1. Zahl =
+			<input type= "text" name="txtZahl1"></input>
+			<br>
+			2. Zahl =
+			<input type= "text" name="txtZahl2"></input>
+			<br>
+			<input type="button" name="btnSumme" value="Summe ermitteln" onclick="fSumme()"></input>
+			<br>
+			Summe =
+			<input type="text" name="txtSumme"></input>
+		</form>
+	</body>
+</html>	

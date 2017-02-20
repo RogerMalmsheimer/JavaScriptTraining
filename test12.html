@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Teiler</title>
+	</head>
+		<body>
+			<script type="text/javascript">
+				function fTeiler(iZ, iT)
+				{
+					var iR = 0;
+					var bTeilbar = false;
+					
+					iR = iZ % iT;
+					if (iR == 0)
+					{
+						bTeilbar = true;
+					}
+					return bTeilbar;
+				}
+				function fPruefen()
+				{
+					var iZahl1 = parseInt(document.frmTeiler.txtZahl1.value);
+					document.frmTeiler.txtZahl1.value = iZahl1;
+					
+					var iZahl2 = parseInt(document.frmTeiler.txtZahl2.value);
+					document.frmTeiler.txtZahl2.value = iZahl2;
+					
+					var bTeiler = fTeiler(iZahl1, iZahl2);
+					if (bTeiler)
+					{
+						alert(iZahl1 + " ist teilbar durch " + iZahl2);
+					}
+					else
+					{
+						alert(iZahl1 + " ist nicht teilbar durch " + iZahl2);
+					}
+				}
+			</script>
+			<form method="get" name="frmTeiler">
+				<h2>Feststellung der Teilbartkeit einer Zahl n durch eine Zahl m</h2>
+				<b>Zahl: Gib eine ganze Zahl n > 1 ein:</b>
+				<input type="text" name="txtZahl1"></br>
+				<b>Teiler: Gib eine ganze Zahl m <> 0 ein:</b>
+				<input type="text" name="txtZahl2"></br>
+				<input type="button" name="btnStart" value="Teilbarkeit pruefen" onclick="fPruefen()">
+			</form>
+		</body>	
+	</html>	

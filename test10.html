@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Quadratzahl</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function fQuadrat(dZ)
+			{
+				var dQ = dZ * dZ;
+				return dQ;
+			}
+			function fBerechne()
+			{
+				var dX = parseFloat(document.frmQuadrat.txtZahl1.value);
+				var dY = fQuadrat(dX);
+				document.frmQuadrat.txtZahl2.value = dY;
+			}
+		</script>
+		<form method="get" name="frmQuadrat">
+			<h2>Berechnung der Quadratzahl einer Zahl</h2>
+			<b>Gib eine Zahl ein:</b>
+			<input type="text" name="txtZahl1"><br>
+			<b>Quadrat der Zahl:</b>
+			<input type="text" name="txtZahl2"><br>
+			<input type="button" name="btnStart" value="Quadrat berechnen" onclick="fBerechne()">
+		</form>
+			
+		</form>
+	</body>	
+	</html>	

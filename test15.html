@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>Teilerliste einer Zahl</title>
+
+		<script type="text/javascript">
+			function fTeiler(iZ, iT)
+			{
+				var	iR = 0;
+				if (iT != 0)
+				{
+					iR = iZ % iT;
+					if (iR == 0)
+					{
+						return true;
+					}
+					else
+					{
+						return false;
+					}
+				}
+				else
+				{
+					return false;
+				}
+			}
+			
+			function fTeilerAusgabe()
+			{
+				with(document.frmTeiler)
+				{
+					tAusgabe.value = "";
+					var iZahl = parseInt(txtZahl.value);
+					var bOk = false;
+					if (iZahl >= 1)
+					{
+						for (var iT = 1; iT <= iZahl; iT++)
+						{
+							bOk = fTeiler(iZahl, iT);
+							if (bOk == true)
+							{
+								tAusgabe.value = tAusgabe.value + iT + "\n";
+							}
+						}
+					}
+					else
+					{
+						alert ("Grösser als 1 habe ich gesagt");
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form method = "get" name = "frmTeiler">
+			<h3>Berechnung der Teilermenge einer Zahl n</h3>
+			<b>Gib eine ganze Zahl groesser als 1 ein:</b><br>
+			
+			<input type = "text" name = "txtZahl">
+			<input type = "button" name = "btnStart" value = "Berechnung starten" onclick = "javascript:fTeilerAusgabe()">
+			<br>
+			<textarea name = "tAusgabe" cols = "20" rows = "50"></textarea>
+		</form>
+	</body>	
+</html>	

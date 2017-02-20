@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>Quadratwurzel</title>
+		<script type="text/javascript">
+
+			var x = Math.abs(parseInt(prompt("Bitte geben Sie eine Zahl ein :")));
+			var sq1 = 0;
+			var sq2 = x;
+			while((sq2 - sq1) >= 0.000000000000001)
+			{
+				sq1 = x / sq2;
+				sq2 = (sq1 + sq2) / 2;
+			}
+			alert("Quadratwurzel aus " + x + " ist " + sq2);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>	

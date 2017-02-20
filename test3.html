@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Hallo Welt in JavaScript</title>
+		<script type="text/javascript">
+			function fHallo()
+			{
+				document.form1.text1.value = "Hallo Welt!";
+			}
+		</script>
+	</head>	
+	<body onload="fHallo()">
+		<form action="ziel.php" name="form1" method="GET" id="form1">
+			<fieldset>
+				<input type="text" name="text1" />
+			</fieldset>
+		</form>
+		<noscript>
+		<form action="ziel.php" name="form1" method="GET" id="form1">
+			<fieldset>
+				<input type="text" name="text1" value="Hallo Welt!" />
+			</fieldset>
+		</form>
+		</noscript>
+	</body>
+</html>	

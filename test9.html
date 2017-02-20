@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>Hallo in JavaScript</title>
+		<script type="text/javascript">
+			do
+			{
+				var sName=prompt("Bitte geben Sie Ihren Namen ein: ");
+				if (sName == null)
+					sName = "Unbekannter";
+				if (sName == "")
+					sName = "leer ";
+				alert("Hallo " + sName + "!");
+				var bRepeat = confirm("Abfrage wiederholen?");
+			}
+			while(bRepeat== true)
+		</script>
+	</head>	
+	
+	<body>
+		<NOSCRIPT>
+			Diese Seite wird nur mit JavaScript
+			korrekt dargestellt. Bitte schalten
+			Sie JavaScript in Ihrem Browser ein!
+		</NOSCRIPT>
+	</body>
+</html>	

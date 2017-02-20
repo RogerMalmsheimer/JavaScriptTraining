@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Fakultaet</title>
+	</head>
+		<script type="text/javascript">
+			function fFakultaet()
+			{
+				var n = Math.abs(parseInt(prompt("Bitte eine positive, ganze Zahl eingeben:")));
+				var f = fFak(n);
+				alert("Fakultaet von " + n + " = " + f);
+				return dQ;
+			}
+			function fFak(n)
+			{
+				if (n == 0)
+				{
+					return 1;
+				}
+				else
+				{
+					return n*fFak(n-1);
+				}
+			}
+		</script>
+		<body>
+			<h3>JavaScript - Rekursive Funktion</h3>
+			<form name="Form1">
+				<input type="button" name="btnFakultaet" value="Fakultaet berechnen" onclick="fFakultaet()">
+			</form>
+		</body>	
+	</html>	

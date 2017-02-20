@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Die Typeof-Funktion</title>
+		<meta name="description" content="Die Typeof-Funktion">
+		<meta name="author" content="R.Malmsheimer">
+		<meta name="keywords" content="Typeof, Funktion">
+		<script type="text/javascript">
+			function fTyp()
+			{
+				var sText="Text";
+				document.write("<H2>Die typeof-Funktion</H2><br>");
+				document.write("sText hat den Typ: " + typeof(sText) + "<br>");
+				var dZahl=3.14159;
+				document.write("dZahl hat den Typ: " + typeof(dZahl) + "<br>");
+				var bPruef=false;
+				document.write("bPruef hat den Typ: " + typeof(bPruef) + "<br>");
+
+				document.write("Math hat den Typ: " + typeof(Math) + "<br>");
+				document.write("window hat den Typ: " + typeof(window) + "<br>");
+				document.write("3.14159 hat den Typ: " + typeof(3.14159) + "<br>");
+			}
+		</script>
+	</head>	
+	<body onload="fTyp()">
+		<H2>Die typeof-Funktion</H2><br>
+	</body>
+</html>	

@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>Eigenschaften des Objektes window</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			var sProp = "";
+			var curTyp = "";
+			
+			document.write("<h1>Eigenschaften von <u>Window<\/u><\/h1>");
+			for(var Prop in window)
+			{
+				curTyp = typeof window[Prop];
+				sProp = (curTyp == "function" || curTyp == "object") ? curTyp : window[Prop];
+				document.write("window." + Prop + ": " + sProp + "<br>");
+			}
+		</script>
+	</body>
+</html>	

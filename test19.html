@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<title>JavaScript - Beispiel fuer eine 'DO WHILE'-Schleife</title>
+		<script type="text/javascript">
+			var	Kunde = new Adresse;
+			
+			function Adresse(Name, Vorname, Strasse, PLZ, Ort)
+			{
+				this.Name = Name;
+				this.Vorname = Vorname;
+				this.Strasse = Strasse;
+				this.PLZ = PLZ;
+				this.Ort = Ort;
+				this.Show = fObjectShowIntern;
+			}
+			
+			function fObjectShowIntern()
+			{
+				var Meldung = "";
+				
+				Meldung = "Kunde.Vorname  = " + this.Vorname + "\n";
+				Meldung += "Kunde.Name    = " + this.Name + "\n";
+				Meldung += "Kunde.Strasse = " + this.Strasse + "\n";
+				Meldung += "Kunde.PLZ 	  = " + this.PLZ + "\n";
+				Meldung += "Kunde.Ort     = " + this.Ort;
+				alert(Meldung);
+			}
+			function fObjectLoad()
+			{
+				with(document.Form1)
+				{
+					Kunde.Name = txtName.value;
+					Kunde.Vorname = txtVorname.value;
+					Kunde.Strasse = txtStrasse.value;
+					Kunde.PLZ = txtPLZ.value;
+					Kunde.Ort = txtOrt.value;
+				}
+			}
+			function fTxtFill()
+			{
+				with(document.Form1)
+				{
+				txtName.value = Kunde.Name;
+				txtVorname.value = Kunde.Vorname;
+				txtStrasse.value = Kunde.Strasse;
+				txtPLZ.value = Kunde.PLZ;
+				txtOrt.value = Kunde.Ort;
+				}
+			}
+			function fObjectShowExtern()
+			{
+				with(document.Form1)
+				{
+					txtAusgabe.value =  "Kunde.Vorname = " + Kunde.Vorname + "\n";
+					txtAusgabe.value += "Kunde.Name    = " + Kunde.Name + "\n";
+					txtAusgabe.value += "Kunde.Strasse = " + Kunde.Strasse + "\n";
+					txtAusgabe.value += "Kunde.PLZ     = " + Kunde.PLZ + "\n";
+					txtAusgabe.value += "Kunde.Ort     = " + Kunde.Ort;
+				}
+			}
+			function fObjectShowMethod()
+			{
+				Kunde.Show()
+			}
+		</script>
+		<noscript>Bitte schalten Sie JavaScript ein</noscript>
+	</head>
+	<body>
+		<h2>JavaScript - ObjectAddress</h2>
+		<form target = "" name = "Form1">
+			<table>
+				<tr>
+					<td>Name : </td>
+					<td><input type = "text" name = "txtName" value = "" size = "" maxlength = "20"></td>
+				</tr>
+				<tr>
+					<td>Vorname : </td>
+					<td><input type = "text" name = "txtVorname" value = "" size = "" maxlength = "20"></td>
+				</tr>
+				<tr>
+					<td>Strasse : </td>
+					<td><input type = "text" name = "txtStrasse" value = "" size = "" maxlength = "30"></td>
+				</tr>
+				<tr>
+					<td>PLZ : </td>
+					<td><input type = "text" name = "txtPLZ" value = "" size = "" maxlength = "5"></td>
+				</tr>
+				<tr>
+					<td>Ort : </td>
+					<td><input type = "text" name = "txtOrt" value = "" size = "" maxlength = "30"></td>
+				</tr>
+				<tr>
+					<td>
+						<input type = "Reset" name = "btnReset" value = "Alle Textfelder loeschen">
+					</td>
+					<td>
+						<input type = "Button" name = "btnFill" value = "Textfelder aus Objekt befuellen" onclick = "fTxtFill()">
+					</td>
+					<td>
+						<input type = "Button" name = "btnLoad" value = "Objekt aus Textfelder laden" onclick = "fObjectLoad()">
+					</td>
+					<td>
+						<input type = "Button" name = "btnShow" value = "Objekt von ausserhalb anzeigen" onclick = "fObjectShowExtern()">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+						<input type = "Button" name "btnShow" value = "Objekt-Methode : Objekt.Show" onclick = "fObjectShowMethod()">
+					</td>
+				</tr>		
+			</table
+			<br>
+			<textarea name = "txtAusgabe" rows = "5" cols = "40"></textarea>
+		</form>
+	</body>
+</html>	
