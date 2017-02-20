@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Password - Feld</title>
+		<meta charset = "UTF-8">
+		<script type="text/javascript">
+			function fPasswdDisplay()
+			{
+				with (document.Formular1.txtPass)
+				{
+					alert("Das Passwort heisst:" + value + " und ist " + value.length + " Zeichen lang");
+				}
+			}
+		</script>
+		<noscript>Bitte schalten Sie JavaScript ein</noscript>
+	</head>
+	<body>
+		<h3>Form mit Passwort-Feld</h3>
+		<form name = "Formular1">
+		Name: <input type="password" size="25" maxLength="50" name="txtPass" value="" onBlur = "fPasswdDisplay()">
+		</form>
+	</body>
+</html>	

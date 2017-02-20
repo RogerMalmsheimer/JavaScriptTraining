@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Versteckte Felder in HTML/JavaScript</title>
+		<meta charset = "UTF-8">
+		<script type="text/javascript">
+		
+			function fHiddenFuell()
+			{
+				with (document.Form1)
+				{
+					txtBrowser.value = navigator.appName;
+					txtScreen.value = screen.height + " x " + screen.width;
+					var Text = "";
+					Text = "Die nicht sichbaren Felder haben folgende Inhalte: " + "\n";
+					Text += "Browser : " + document.Form1.txtBrowser.value + "\n";
+					Text += "Bildschirm : " + document.Form1.txtScreen.value + "\n";
+					Text += "----------------------------------------" + "\n";
+					Text += "Nachrichten-Feld enthaelt : " + "\n";
+					Text += Message.value;
+					alert(Text);
+				}
+			}
+		</script>
+		<noscript>Bitte schalten Sie JavaScript ein</noscript>
+	</head>
+	<body>
+		<h3>Versteckte Felder in HTML/JavaScript</h3>
+		<form name = "Form1">
+			<p>
+				<input type = "hidden" name = "txtBrowser"<</input>
+				<input type = "hidden" name = "txtScreen"<</input>
+				<Nachricht:<br>
+				<textarea name = "Message" rows="10" cols="60"></textarea><br>
+				<input type="button" value="senden" name="btnSubmit" onclick="fHiddenFuell()"><br>
+			</p>
+		</form>
+	</body>
+</html>	
